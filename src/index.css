@@ -15,7 +15,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   body {
     font-family: 'Helvetica';
-    background-color: rgb(80, 80, 192);
+    background-color: rgb(68, 68, 189);
     color: #fff;
   }
   
@@ -76,14 +76,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 33%;
-    padding: 0 20px;
-    margin: 10px 0;
+    width: 31%;
+    padding: 20px 20px;
+    margin: 15px;
+    border: 1px solid white;
+    box-shadow: 10px 15px gray;
+    background-color: rgb(28, 28, 28);
   }
   
-  
+  .current {
+    text-transform: capitalize;
+  }
+
+  button {
+    padding: 5px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+  }
+
+  li a:visited {
+    text-decoration: none;
+  }

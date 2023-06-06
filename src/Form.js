@@ -52,7 +52,8 @@ useEffect (() => {
 
     return (
         <>
-            <label>News from:</label>
+        <p>Choose from our Options below</p>
+            <label>Country:</label>
             <div
             className="countries"
             onClick={handleChange}>
@@ -81,12 +82,12 @@ useEffect (() => {
                 <button onClick={() => setCategory('technology')}>Technology</button>
             </div>  
             <div>
-                <form>
-                    <label>Search: </label>
-                    <input type="text" id="input"/>
+                <form className="search">
+                    <input type="text" id="input" placeholder="Search :"/>
                     <button onClick={handleSubmit}>Submit</button>
                 </form>
             </div> 
+            <p className="current">{`Currently showing ${category} in ${country}`}</p>
             <ul>
                 {news.map((article, key)=>(
                      <li key={key} className="news-items">
