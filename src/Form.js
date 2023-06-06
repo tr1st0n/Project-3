@@ -67,7 +67,7 @@ useEffect (() => {
                 <button onClick={() => setCountry('gb')}>United Kingdom</button>
                 <button onClick={() => setCountry('au')}>Australia</button>
             </div>
-            <label>Categories:</label>
+            <label>Category:</label>
             <div 
             className="categories"
             onClick={handleChange}>
@@ -90,8 +90,9 @@ useEffect (() => {
             <p className="current">{`Currently showing ${category} in ${country}`}</p>
             <ul>
                 {news.map((article, key)=>(
+
                      <li key={key} className="news-items">
-                        <Link to={article.link}>
+                        <Link to={article.link} style={{textDecoration: 'inherit', color: 'inherit'}}>
                             <h3>{article.title}</h3>
                         </Link>
                         
@@ -99,6 +100,7 @@ useEffect (() => {
                         <p>{article.description}</p>                        
                         <p>{`Published on: ${article.pubDate}`}</p>
                     </li>
+                    
                 ))}
             </ul>         
         </>
