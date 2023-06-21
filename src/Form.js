@@ -37,16 +37,15 @@ useEffect (() => {
     }) 
     }, [category, country])
 
-    console.log(news)
+
 
     const handleChange = (e) => {
-        console.log('change has been made')
+
         setNews(news)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("searching")
         setInput(e.target.value);
     }
 
@@ -91,7 +90,7 @@ useEffect (() => {
             <ul>
                 {news.map((article, key)=>(
 
-                     <li key={key} className="news-items">
+                     <li key={key} className="news-items">s
                         <Link to={article.link} style={{textDecoration: 'inherit', color: 'inherit'}}>
                             <h3>{article.title}</h3>
                         </Link>
