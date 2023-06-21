@@ -90,7 +90,7 @@ useEffect (() => {
             <ul>
                 {news.map((article, key)=>(
 
-                     <li key={key} className="news-items">s
+                     <li key={key} className="news-items">
                         <Link to={article.link} style={{textDecoration: 'inherit', color: 'inherit'}}>
                             <h3>{article.title}</h3>
                         </Link>
